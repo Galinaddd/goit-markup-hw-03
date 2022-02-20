@@ -13,6 +13,7 @@
   --common-txtcolor: #757575;
   --footer-contacts: rgb(255, 255, 255, 0.6);
   --button-color: #f5f4fa;
+
   --header-line: #ececec;
   --card-bottom-line: #eeeeee;
 }
@@ -28,25 +29,18 @@ ul {
 }
 
 img {
-  display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .container {
-  /* outline: 3px solid rgb(76, 231, 28);
-  background-color: aqua; */
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-
-  display: block;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 .section {
-  /* outline: 1px solid black; */
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -59,10 +53,6 @@ img {
 
 .header-container {
   align-items: center;
-}
-
-.nav-list {
-  margin-left: 93px;
 }
 
 .nav-item:not(:last-child) {
@@ -79,7 +69,6 @@ img {
 /* ****************************************** */
 
 body {
-  /* background-color: blue; */
   color: var(--common-txtcolor);
   font-family: var(--primery-font), sans-serif;
   font-size: 14px;
@@ -90,6 +79,7 @@ body {
 
 /* Логотип */
 .logo {
+  margin-right: 93px;
   color: var(--accent-color);
   font-family: var(--secondary-font), sans-serif;
   font-size: 26px;
@@ -109,7 +99,6 @@ body {
 
 /* Стилизация верхнего меню - навигации и списка контактов*/
 .header {
-  font-family: inherit;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -118,16 +107,16 @@ body {
 
 .nav-link {
   display: block;
-  padding-top: 27px;
-  padding-bottom: 37px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--title-color);
 }
 
 .adress-link {
   display: block;
-  padding-top: 27px;
-  padding-bottom: 37px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--common-txtcolor);
 }
@@ -231,27 +220,28 @@ body {
 }
 
 .features-item {
-  width: calc(100 - 90px) / 4;
+  width: calc((100%- 90px) / 4);
 }
 
 .features-item:not(:last-child) {
-  padding-right: 90px;
+  margin-right: 30px;
 }
 
 /*секция наших проектов */
 
+.project-section {
+  padding-top: 0;
+}
+
 .projects-list {
   display: flex;
+  margin-top: 50px;
 }
 .projects-item {
-  width: calc(100 -60px) / 3;
-  padding-top: 50px;
+  width: calc((100% -60px) / 3);
 }
 .projects-item:not(:last-child) {
-  padding-right: 30px;
-}
-.projects-img {
-  display: block;
+  margin-right: 30px;
 }
 
 /* ******************* */
@@ -259,7 +249,7 @@ body {
 /* Секция Наша команда */
 .team {
   color: var(--common-txtcolor);
-
+  background-color: var(--button-color);
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
@@ -267,13 +257,14 @@ body {
 
 .team-list {
   display: flex;
+  margin-top: 50px;
 }
 
 .team-card {
-  width: calc(100 - 90px) / 4;
-  margin-top: 50px;
+  width: calc((100% - 90px) / 4);
   text-align: center;
 }
+
 .team-card:not(:last-child) {
   margin-right: 30px;
 }
@@ -282,11 +273,15 @@ body {
   color: var(--title-color);
   font-size: 16px;
   font-weight: 500;
-  margin-top: 30px;
   margin-bottom: 10px;
 }
 .team-img {
   display: block;
+}
+
+.team-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 /* Стили футера */
@@ -294,9 +289,6 @@ body {
   line-height: 24px;
   color: var(--color-secondary);
   background-color: var(--background-color);
-}
-
-.footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -308,11 +300,15 @@ body {
   line-height: 24px;
   color: var(--color-secondary);
 }
+
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 .contacts {
   color: var(--footer-contacts);
 }
 
-.footer-list {
+.foot-adress {
   margin-top: 20px;
 }
 /* ----------------- */
@@ -342,8 +338,7 @@ body {
 }
 
 .gallery-item {
-  width: calc(100 - 60px) / 3;
-  border-bottom: 1px solid var(--card-bottom-line);
+  width: calc((100% - 60px) / 3);
 }
 .gallery-item:not(:nth-child(3n)) {
   margin-right: 30px;
@@ -351,9 +346,15 @@ body {
 .gallery-item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
 }
+.gallery-item img {
+  display: block;
+}
 
 .card-content {
   padding: 20px 24px;
+  border-bottom: 1px solid var(--card-bottom-line);
+  border-left: 1px solid var(--card-bottom-line);
+  border-right: 1px solid var(--card-bottom-line);
 }
 
 .gallery-title {
